@@ -22,6 +22,8 @@ import {
   StepContainer
 } from "../../../components/setup/step-container"
 
+import { appText } from "@/config/apptext"
+
 export default function SetupPage() {
   const {
     profile,
@@ -163,7 +165,7 @@ export default function SetupPage() {
           <StepContainer
             stepDescription="Let's create your profile."
             stepNum={currentStep}
-            stepTitle="Welcome to Chatbot UI"
+            stepTitle={appText.common.welcomeMessage}
             onShouldProceed={handleShouldProceed}
             showNextButton={!!(username && usernameAvailable)}
             showBackButton={false}

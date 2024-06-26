@@ -11,11 +11,13 @@ import { cookies } from "next/headers"
 import { ReactNode } from "react"
 import "./globals.css"
 
+import { appText } from "@/config/apptext"
+
 const inter = Inter({ subsets: ["latin"] })
-const APP_NAME = "Chatbot UI"
-const APP_DEFAULT_TITLE = "Chatbot UI"
-const APP_TITLE_TEMPLATE = "%s - Chatbot UI"
-const APP_DESCRIPTION = "Chabot UI PWA!"
+const APP_NAME = appText.common.brandName
+const APP_DEFAULT_TITLE = appText.common.brandName
+const APP_TITLE_TEMPLATE = `%s - ${appText.common.brandName}`
+const APP_DESCRIPTION = appText.common.appDescription
 
 interface RootLayoutProps {
   children: ReactNode
